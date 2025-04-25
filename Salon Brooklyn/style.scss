@@ -505,8 +505,7 @@ body {}
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     row-gap: 112px;
-    column-gap: 222px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .ServicesBlock_item {
@@ -831,3 +830,4 @@ body {}
     color: #fff;
     opacity: 0.3;
 }
+@import 'tablet.scss';

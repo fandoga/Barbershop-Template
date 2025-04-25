@@ -9,8 +9,9 @@ let offsetPosition
 
 
 document.addEventListener('click', (event) => {
-    event.preventDefault()
     Event = event.target
+    if (Event.dataset.target) {
+    event.preventDefault()
     element = document.querySelector(Event.dataset.target);
     elementPosition = element.getBoundingClientRect().top;
     offsetPosition = elementPosition + window.pageYOffset - offset;
@@ -21,6 +22,7 @@ document.addEventListener('click', (event) => {
     });
 
     console.log(Event.dataset.target);
+    }
 })
 
 document.addEventListener("DOMContentLoaded", function () {
