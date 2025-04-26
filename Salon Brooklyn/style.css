@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -63,6 +64,11 @@
   display: none;
   width: 52px;
   height: 52px;
+  transition: transform 0.2s ease;
+}
+
+.dropdown_icon.open {
+  transform: rotate(90deg);
 }
 
 .dropdown_wrapper {
@@ -102,7 +108,7 @@
 }
 
 .dropdown_content a {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -111,6 +117,7 @@
   display: flex;
   align-items: center;
   gap: 90px;
+  margin-left: auto;
 }
 
 .menu_links {

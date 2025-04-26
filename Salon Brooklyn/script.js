@@ -90,9 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
         DropdownButton.addEventListener('click', function () {
             if (!isDropdownOpen) {
                 DropdownMenu.classList.add('open');
+                DropdownButton.classList.add('open');
                 isDropdownOpen = true;
             } else {
                 DropdownMenu.classList.remove('open');
+                DropdownButton.classList.remove('open');
                 isDropdownOpen = false;
             }
             console.log(window.pageYOffset);
