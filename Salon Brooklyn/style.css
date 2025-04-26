@@ -20,7 +20,7 @@
 .back_to_top {
   position: fixed;
   bottom: -200px;
-  right: -30px;
+  right: -80px;
   transform: scale(0.2);
   border-radius: 100%;
   background: #fff;
@@ -49,9 +49,62 @@
 
 .header {
   padding-top: 52px;
+}
+
+.header_content {
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.dropdown_icon {
+  cursor: pointer;
+  display: none;
+  width: 52px;
+  height: 52px;
+}
+
+.dropdown_wrapper {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.dropdown_content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  max-height: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  right: -20px;
+  top: 100%;
+  transition: all 0.4s ease;
+}
+.dropdown_content.open {
+  max-height: 160px;
+}
+
+.dropdown_content:after {
+  content: "";
+  background-color: #191919;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.dropdown_content a {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .menu {
@@ -188,7 +241,6 @@
   display: flex;
   justify-content: space-between;
   width: 1050px;
-  height: 476px;
 }
 
 .AboutUs_info {
@@ -225,6 +277,7 @@
   grid-template-rows: auto auto;
   gap: 10px;
   position: relative;
+  height: 476px;
 }
 
 .AboutUs_imageBlock img {
@@ -361,7 +414,6 @@
 .workflow_content {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
   width: 1134px;
   height: 393px;
   background: #fbb034;
@@ -369,6 +421,7 @@
 
 .workflow_info {
   padding-top: 60px;
+  padding-left: 60px;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -467,6 +520,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.Map_container {
+  width: 620px;
 }
 
 .ServicesBar {
@@ -616,14 +673,6 @@
   font-size: 20px;
   line-height: 107%;
   color: #000000;
-}
-
-.item_1 {
-  margin-top: -315px;
-}
-
-.item_2 {
-  margin-top: -157px;
 }
 
 .MastersBlock_img_container {
@@ -808,5 +857,181 @@
   .center {
     padding-left: calc(50% - 512px);
     padding-right: calc(50% - 512px);
+  }
+}
+@media (max-width: 1060px) {
+  .center {
+    padding-left: calc(50% - 393px);
+    padding-right: calc(50% - 393px);
+  }
+  .menu {
+    gap: 40px;
+  }
+  .menu_links {
+    gap: 30px;
+  }
+  .top_img-wrapper {
+    transform: scale(0.8);
+    translate: 10% 10%;
+  }
+  .AboutUs {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .AboutUs_info {
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .AboutUs_info h2 {
+    text-align: center;
+  }
+  .imageBlock {
+    width: 60%;
+    overflow: hidden;
+  }
+  .workflow_info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .Review_content {
+    padding-bottom: 90px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Review_Upper {
+    margin-bottom: 30px;
+  }
+  .Review_Img {
+    justify-content: center;
+  }
+  .Review_info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ServicesBlock {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  .MastersBar_info {
+    align-items: center;
+    padding-bottom: 30px;
+  }
+  .MastersBar_text {
+    text-align: center;
+  }
+  .MastersBlock {
+    flex-direction: column;
+  }
+  .MastersBlock_item {
+    margin-bottom: 60px;
+  }
+  .footer_info_links {
+    flex-direction: column;
+  }
+  .footer_info_links a {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .footer_info_contacts {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .contacts_text {
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo_links {
+    transform: translateX(-80%);
+  }
+}
+@media (max-width: 815px) {
+  .center {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .back_to_top {
+    transform: scale(0.15);
+    right: -110px;
+  }
+  .header {
+    height: 200px;
+    display: block;
+    align-items: flex-start;
+  }
+  .dropdown_icon {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .top_img-wrapper {
+    display: none;
+  }
+  .top_content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .top_info {
+    margin-top: 52px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button__top {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .ContactBar_content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ContactBar_info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ContactBar_phone {
+    display: none;
+  }
+  .imageBlock {
+    display: none;
+  }
+  .workflow_content {
+    justify-content: center;
+  }
+  .workflow_info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .workflow_title {
+    padding: 0;
+  }
+  .line {
+    width: 100%;
+  }
+  .Map_container {
+    width: calc(100vw - 40px);
+  }
+  .ServicesInfo h2 {
+    text-align: center;
+  }
+  .ServicesBlock_item {
+    width: 405px;
+  }
+  .footer_title {
+    display: none;
+  }
+  .logo_links {
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=style.css.map */

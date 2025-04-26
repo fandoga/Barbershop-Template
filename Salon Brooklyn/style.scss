@@ -22,7 +22,7 @@ body {}
 .back_to_top {
     position: fixed;
     bottom: -200px;
-    right: -30px;
+    right: -80px;
     transform: scale(0.2);
     border-radius: 100%;
     background: #fff;
@@ -52,9 +52,66 @@ body {}
 
 .header {
     padding-top: 52px;
+
+}
+
+.header_content {
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.dropdown_icon {
+    cursor: pointer;
+    display: none;
+    width: 52px;
+    height: 52px;
+}
+
+.dropdown_wrapper {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown_content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    max-height: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    right: -20px;
+    top: 100%;
+    transition: all 0.4s ease;
+
+    &:hover {}
+}
+
+.dropdown_content.open {
+    max-height: 160px;
+}
+
+.dropdown_content:after {
+    content: "";
+    background-color: #191919;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.dropdown_content a {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .menu {
@@ -199,8 +256,8 @@ body {}
     justify-content: space-between;
     // width: 60%;
     width: 1050px;
-    height: 476px;
 }
+
 
 .AboutUs_info {
     display: flex;
@@ -236,6 +293,7 @@ body {}
     grid-template-rows: auto auto;
     gap: 10px;
     position: relative;
+    height: 476px;
 }
 
 .AboutUs_imageBlock img {
@@ -375,7 +433,6 @@ body {}
 .workflow_content {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
     width: 1134px;
     height: 393px;
     background: #fbb034;
@@ -383,6 +440,7 @@ body {}
 
 .workflow_info {
     padding-top: 60px;
+    padding-left: 60px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -481,6 +539,10 @@ body {}
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.Map_container {
+    width: 620px;
 }
 
 .ServicesBar {
@@ -635,15 +697,6 @@ body {}
         }
     }
 }
-
-.item_1 {
-    margin-top: -315px;
-}
-
-.item_2 {
-    margin-top: -157px;
-}
-
 
 
 .MastersBlock_img_container {
@@ -830,4 +883,9 @@ body {}
     color: #fff;
     opacity: 0.3;
 }
+
+@import 'laptop.scss';
+
 @import 'tablet.scss';
+
+@import 'mobile.scss';

@@ -20,18 +20,29 @@
     <div class="top">
         <div class="center">
             <header class="header">
-                <a href="index.html" class="logo">
-                    <img src="assets/img/Logo.png" alt="">
-                </a>
-                <div class="menu">
-                    <div class="menu_links">
-                        <a class="menu_link Main_link menu_link__active hover_anim yellow" data-target=".top"
-                            href="">Главная</a>
-                        <a class="menu_link AboutUs_link hover_anim" data-target=".AboutBar" href="">О нас</a>
-                        <a class="menu_link Services_link hover_anim" data-target=".ServicesInfo" href="">Услуги</a>
-                        <a class="menu_link Contacts_link hover_anim" data-target=".footer" href="">Контакты</a>
+                <div class="header_content">
+                    <a href="index.html" class="logo">
+                        <img src="assets/img/Logo.png" alt="">
+                    </a>
+                    <div class="menu">
+                        <div class="menu_links">
+                            <a class="menu_link Main_link menu_link__active hover_anim yellow" data-target=".top"
+                                href="">Главная</a>
+                            <a class="menu_link AboutUs_link hover_anim" data-target=".AboutBar" href="">О нас</a>
+                            <a class="menu_link Services_link hover_anim" data-target=".ServicesInfo" href="">Услуги</a>
+                            <a class="menu_link Contacts_link hover_anim" data-target=".footer" href="">Контакты</a>
+                        </div>
+                        <button data-link="SignUp" class="button">Записаться</button>
                     </div>
-                    <button class="button">Записаться</button>
+                    <div class="dropdown_wrapper">
+                        <img class="dropdown_icon" src="assets/img/dropdown_icon.svg" alt="">
+                        <nav class="dropdown_content">
+                            <a class="menu_link Main_link hover_anim" data-target=".top" href="">Главная</a>
+                            <a class="menu_link AboutUs_link hover_anim" data-target=".AboutBar" href="">О нас</a>
+                            <a class="menu_link Services_link hover_anim" data-target=".ServicesInfo" href="">Услуги</a>
+                            <a class="menu_link Contacts_link hover_anim" data-target=".footer" href="">Контакты</a>
+                        </nav>
+                    </div>
                 </div>
             </header>
 
@@ -43,7 +54,7 @@
                         Brooklyn предлагает эффективные индивидуальные процедуры по уходу за лицом, которые
                         обеспечат вам шикарный результаты.
                     </p>
-                    <button class="button">Записаться</button>
+                    <button data-link="SignUp" class="button">Записаться</button>
                     <button data-target=".ServicesInfo" class="button__top">Услуги</button>
                 </div>
             </section>
@@ -64,7 +75,8 @@
                             волосы, чтобы придать им желаемый вид. Запишитесь к нам на прием, чтобы сделать ваши любимые
                             прически!
                         </p>
-                        <a href="https://yandex.ru/maps/35/krasnodar/?ll=38.978520%2C45.048643&mode=poi&poi%5Bpoint%5D=38.978259%2C45.048308&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D76432434820&utm_content=more-reviews&utm_medium=reviews&utm_source=maps-reviews-widget&z=18.23">
+                        <a
+                            href="https://yandex.ru/maps/35/krasnodar/?ll=38.978520%2C45.048643&mode=poi&poi%5Bpoint%5D=38.978259%2C45.048308&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D76432434820&utm_content=more-reviews&utm_medium=reviews&utm_source=maps-reviews-widget&z=18.23">
                             <button class="button">Узнать больше</button>
                         </a>
                     </div>
@@ -86,7 +98,7 @@
                         Получите скидку 10% при первой записи
                         через наш сайт
                     </p>
-                    <button class="button_contact">Записаться</button>
+                    <button data-link="SignUp" class="button_contact">Записаться</button>
                 </div>
                 <div class="ContactBar_phone">
                     <a href="tel:+79994442211" class="phone_number">
@@ -120,13 +132,13 @@
                         <p class="work_days">Суббота</p>
                         <p class="work_time">10:00 - 19:00</p>
                     </div>
-                    <button class="button_black">Записаться</button>
+                    <button data-link="SignUp" class="button_black">Записаться</button>
                 </div>
             </div>
         </section>
         <section class="ReviewBar center">
             <div class="Review_content">
-                <div class="Review_Block">
+                <div class="Review_Upper">
                     <div class="Review_Img">
                         <div class="Review_imageBlock">
                             <img src="assets/img/pic3.png" alt="">
@@ -143,14 +155,16 @@
                             придать
                             им желаемый вид. Запишитесь к нам на прием, чтобы сделать ваши любимые прически!
                         </p>
-                        <a href="https://yandex.ru/maps/org/brooklyn/76432434820/reviews/?ll=38.978196%2C45.048348&utm_content=more-reviews&utm_medium=reviews&utm_source=maps-reviews-widget&z=16">
+                        <a
+                            href="https://yandex.ru/maps/org/brooklyn/76432434820/reviews/?ll=38.978196%2C45.048348&utm_content=more-reviews&utm_medium=reviews&utm_source=maps-reviews-widget&z=16">
                             <button class="button">Наши отзывы</button>
                         </a>
                     </div>
                 </div>
                 <div class="Review_Block">
                     <div class="Review_Block_item">
-                        <div style="width:620px;height:800px;overflow:hidden;position:relative;"><iframe
+                        <div class="Map_container" style="height:800px;overflow:hidden;position:relative;">
+                            <iframe
                                 style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box"
                                 src="https://yandex.ru/maps-reviews-widget/76432434820?comments"></iframe><a
                                 href="https://yandex.ru/maps/org/brooklyn/76432434820/" target="_blank"
@@ -171,31 +185,31 @@
                         оформление бороды и детскую стрижку</p>
                 </div>
                 <div class="ServicesBlock">
-                    <div class="ServicesBlock_item">
+                    <div data-link="Service_1" class="ServicesBlock_item">
                         <div class="ServicesBlock_item_img_container">
-                            <img class="ServicesBlock_item_img" src="assets/img/service_1.jpg" alt="">
+                            <img id="1" class="ServicesBlock_item_img" src="assets/img/service_1.jpg" alt="">
                         </div>
-                        <div class="ServicesBlock_item_info">
-                            <p class="ServicesBlock_item_title">Мужская стрижка</p>
-                            <p class="ServicesBlock_item_title">от 1200 руб.</p>
+                        <div id="1" class="ServicesBlock_item_info">
+                            <p id="1" class="ServicesBlock_item_title">Мужская стрижка</p>
+                            <p id="1" class="ServicesBlock_item_title">от 1200 руб.</p>
                         </div>
                     </div>
-                    <div class="ServicesBlock_item ServicesBlock_item_big">
+                    <div data-link="Service_2" class="ServicesBlock_item ServicesBlock_item_big">
                         <div class="ServicesBlock_item_img_container">
-                            <img class="ServicesBlock_item_img" src="assets/img/service_2.jpg" alt="">
+                            <img id="2" class="ServicesBlock_item_img" src="assets/img/service_2.jpg" alt="">
                         </div>
-                        <div class="ServicesBlock_item_info">
-                            <p class="ServicesBlock_item_title">Оформление бороды</p>
-                            <p class="ServicesBlock_item_title">от 800 руб.</p>
+                        <div id="2" class="ServicesBlock_item_info">
+                            <p id="2" class="ServicesBlock_item_title">Оформление бороды</p>
+                            <p id="2" class="ServicesBlock_item_title">от 800 руб.</p>
                         </div>
                     </div>
-                    <div class="ServicesBlock_item">
+                    <div data-link="Service_3" class="ServicesBlock_item">
                         <div class="ServicesBlock_item_img_container">
-                            <img class="ServicesBlock_item_img" src="assets/img/service_3.jpg" alt="">
+                            <img id="3" class="ServicesBlock_item_img" src="assets/img/service_3.jpg" alt="">
                         </div>
-                        <div class="ServicesBlock_item_info">
-                            <p class="ServicesBlock_item_title">Детская стрижка</p>
-                            <p class="ServicesBlock_item_title">от 750 руб.</p>
+                        <div id="3" class="ServicesBlock_item_info">
+                            <p id="3" class="ServicesBlock_item_title">Детская стрижка</p>
+                            <p id="3" class="ServicesBlock_item_title">от 750 руб.</p>
                         </div>
                     </div>
                 </div>
@@ -210,19 +224,22 @@
                         услуг, мужские стрижки, оформление бороды и другое</p>
                 </div>
                 <div class="MastersBlock">
-                    <a href="https://n1174179.yclients.com/company/1077045/personal/select-master/master-info/1077045/3461537?o=" class="MastersBlock_item item_1">
+                    <a href="https://n1174179.yclients.com/company/1077045/personal/select-master/master-info/1077045/3461537?o="
+                        class="MastersBlock_item item_1">
                         <div class="MastersBlock_img_container">
                             <img src="assets/img/master_1.jpg" alt="">
                         </div>
                         <p class="MastersBlock_item_name">Богдан</p>
                     </a>
-                    <a href="https://n1174179.yclients.com/company/1077045/personal/select-master/master-info/1077045/3311167?o=" class="MastersBlock_item item_2">
+                    <a href="https://n1174179.yclients.com/company/1077045/personal/select-master/master-info/1077045/3311167?o="
+                        class="MastersBlock_item item_2">
                         <div class="MastersBlock_img_container">
                             <img src="assets/img/master_2.jpg" alt="">
                         </div>
                         <p class="MastersBlock_item_name">Армен</p>
                     </a>
-                    <a href="https://n1174179.yclients.com/company/1077045/personal/select-master/master-info/1077045/3646687?o=" class="MastersBlock_item item_3">
+                    <a href="https://n1174179.yclients.com/company/1077045/personal/select-master/master-info/1077045/3646687?o="
+                        class="MastersBlock_item item_3">
                         <div class="MastersBlock_img_container">
                             <img src="assets/img/master_3.jpg" alt="">
                         </div>
@@ -247,7 +264,7 @@
                 <img src="assets/img/Logo.png" alt="">
                 <div class="footer_buttons">
                     <h2 class="footer_title">Готовы начать?</h2>
-                    <button class="footer_button">Работаем!</button>
+                    <button data-link="SignUp" class="footer_button">Работаем!</button>
                 </div>
             </div>
             <div class="footer_info">
